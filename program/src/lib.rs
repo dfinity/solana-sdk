@@ -581,7 +581,7 @@ pub use solana_sysvar::program_stubs;
 pub mod vote {
     pub use solana_vote_interface::*;
 }
-#[cfg(target_arch = "wasm32")]
+#[cfg(all(feature = "js", target_arch = "wasm32"))]
 pub use wasm_bindgen::prelude::wasm_bindgen;
 pub use {
     solana_account_info::{self as account_info, debug_account_data},

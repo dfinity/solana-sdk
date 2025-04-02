@@ -17,12 +17,19 @@ rustdoc-args = ["--cfg=docsrs"]
 [features]
 bincode = ["dep:bincode", "dep:serde"]
 borsh = ["dep:borsh"]
-default = ["std"]
+default = ["std", "js"]
 frozen-abi = [
     "dep:solana-frozen-abi",
     "dep:solana-frozen-abi-macro",
     "serde",
     "std",
+]
+js = [
+    "dep:getrandom",
+    "dep:wasm-bindgen",
+    "dep:js-sys",
+    "solana-instruction/js",
+    "solana-pubkey/js",
 ]
 serde = ["dep:serde", "dep:serde_derive", "solana-pubkey/serde"]
 std = []
@@ -39,9 +46,9 @@ solana-frozen-abi-macro = { workspace = true, optional = true }
 solana-pubkey = { workspace = true, default-features = false }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-getrandom = { workspace = true, features = ["js", "wasm-bindgen"] }
-js-sys = { workspace = true }
-wasm-bindgen = { workspace = true }
+getrandom = { workspace = true, optional = true, features = ["js", "wasm-bindgen"] }
+js-sys = { workspace = true, optional = true }
+wasm-bindgen = { workspace = true, optional = true }
 
 [target.'cfg(target_os = "solana")'.dependencies]
 solana-define-syscall = { workspace = true }

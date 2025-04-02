@@ -41,7 +41,7 @@ pub mod commitment_config {
 }
 #[cfg(not(target_os = "solana"))]
 pub use solana_program::program_stubs;
-#[cfg(target_arch = "wasm32")]
+#[cfg(all(feature = "js", target_arch = "wasm32"))]
 pub use solana_program::wasm_bindgen;
 pub use solana_program::{
     account_info, big_mod_exp, blake3, bpf_loader, bpf_loader_deprecated, clock, config,
