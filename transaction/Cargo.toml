@@ -38,7 +38,6 @@ js = [
     "solana-instruction/js",
     "solana-keypair/js",
     "solana-message/js",
-    "solana-program/js",
     "solana-pubkey/js",
     "solana-sdk/js",
 ]
