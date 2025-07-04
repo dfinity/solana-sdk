@@ -24,7 +24,6 @@ bincode = [
     "solana-message/bincode",
 ]
 blake3 = ["bincode", "solana-message/blake3"]
-default = ["js"]
 dev-context-only-utils = ["blake3", "precompiles", "serde", "verify"]
 frozen-abi = [
     "dep:solana-frozen-abi",

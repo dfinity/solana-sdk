@@ -21,7 +21,7 @@ rustdoc-args = ["--cfg=docsrs"]
 crate-type = ["cdylib", "rlib"]
 
 [features]
-default = ["borsh", "js"]
+default = ["borsh"]
 borsh = [
     "dep:borsh",
     "dep:borsh0-10",
