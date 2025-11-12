@@ -1,7 +1,7 @@
 > [!IMPORTANT]
-> This is a fork of the original `solana-sdk` repository that was used to make the code run in non-browser WASM environments, 
+> This is a fork of the original `solana-sdk` repository that was used to make the code run in non-browser WASM environments,
 > such as a canister running on the [Internet Computer](https://internetcomputer.org) (ICP).
-> This fork is not longer required since the relase of [v3.0.0](https://github.com/anza-xyz/solana-sdk/releases/tag/sdk%40v3.0.0). 
+> This fork is not longer required since the relase of [v3.0.0](https://github.com/anza-xyz/solana-sdk/releases/tag/sdk%40v3.0.0).
 > The [original repository]((https://github.com/anza-xyz/solana-sdk) should now be used instead of this fork.
 
 [![Solana crate](https://img.shields.io/crates/v/solana-sdk.svg)](https://crates.io/crates/solana-sdk)
